@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Hotel Room Reservation System</h2>
+    
+    <div class="controls">
+      <label for="numRooms">Number of rooms:</label>
+      <input type="number" id="numRooms" [(ngModel)]="numRooms" min="1" max="5">
+      <button (click)="bookRooms()">Book</button>
+      <button (click)="randomizeOccupancy()">Random Occupancy</button>
+      <button (click)="resetHotel()">Reset</button>
+    </div>
+  
+    <div class="hotel">
+        <div *ngFor="let floor of [10,9,8,7,6,5,4,3,2,1]" class="floor">
+          <span class="floor-label">Floor {{floor}}</span>
+          <div class="rooms">
+            <span *ngFor="let room of hotelFloors[floor]" 
+                  [class.booked]="bookedRooms.includes(room)"
+                  [class.available]="availableRooms.includes(room)"
+                  [class.empty]="!bookedRooms.includes(room) && !availableRooms.includes(room)">
+              {{ room ? room : 'X' }}
+            </span>
+          </div>
+        </div>
+      </div>
+</div>

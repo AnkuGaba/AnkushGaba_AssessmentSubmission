@@ -1,0 +1,52 @@
+.container {
+  text-align: center;
+  margin: 20px;
+}
+.controls {
+  margin-bottom: 20px;
+}
+.hotel {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.floor {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.floor-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.rooms {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.rooms span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+}
+
+.available {
+  background-color: green;
+  color: white;
+}
+
+.empty {
+  background-color: lightgray;
+  color: black;
+}
